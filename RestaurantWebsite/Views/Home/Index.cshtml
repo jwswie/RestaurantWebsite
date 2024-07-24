@@ -1,3 +1,136 @@
 ﻿@{
 
 }
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Restaurant Website</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="~/css/style.css">
+    <script src="~/js/jquery.js"></script>
+    <script src="~/js/jquery-migrate-1.1.1.js"></script>
+    <script src="~/js/superfish.js"></script>
+
+</head>
+<body>
+    <div class="main">
+        <header>
+            <div class="container_12">
+                <div class="grid_12">
+                    <div class="menu_block">
+                        <nav>
+                            <ul class="sf-menu">
+                                <li class="current"><a href="#">Home</a></li>
+                                <li class="with_ul">
+                                    <a href="#">Categories</a>
+                                    <ul>
+                                        <li><a href="#">Category1</a></li>
+                                        <li><a href="#">Category2</a></li>
+                                        <li><a href="#">Category3</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Menu</a></li>
+                                <li><a href="@Url.Action("Register", "Home")">Book Table</a></li>
+                                <li><a href="#">Contact Us</a></li>
+                            </ul>
+                        </nav>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </header>
+
+        <div class="slider-relative">
+            <img src="~/images/slide.jpg" alt="">
+        </div>
+
+        <div class="content page1">
+            <div class="container_12">
+                <div class="grid_7">
+                    <h2>Welcome</h2>
+                    <div class="page1_block col1">
+                        <img src="~/images/welcome_img.png" alt="">
+                        <div class="extra_wrapper">
+                            <p><span class="col2"><a href="#">Click here</a></span> for more info about our restaurant and chefs</p>Our talented chefs craft each dish with passion and precision, using only the freshest ingredients<br>
+                            <a href="#" class="btn">more</a>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+                <div class="grid_5">
+                    <h2>Features of our restaurant</h2>
+                    <ul class="list">
+                        <li><a href="#">Diverse menu crafted with fresh, high-quality ingredients</a></li>
+                        <li><a href="#">Experienced Chefs</a></li>
+                        <li><a href="#">Stylish and comfortable setting</a></li>
+                        <li><a href="#">Exceptional Service</a></li>
+                        <li><a href="#">Local Ingredients</a></li>
+                    </ul>
+                </div>
+                <div class="clear"></div>
+                <div class="grid_12">
+                    <div class="hor_separator"></div>
+                </div>
+                <div class="grid_12">
+                    <div class="car_wrap">
+                        <h2>Our Menu</h2>
+                        <a href="#" class="prev"></a><a href="#" class="next"></a>
+                        <ul class="carousel1">
+                            <li>
+                                <div>
+                                    <img src="~/images/page1_img1.jpg" alt="">
+                                    <div class="col1 upp"> <a href="#">Lorem ipsum doamet consectet</a></div>
+                                    <span> Dorem ipsum dolor amet consectetur</span>
+                                    <div class="price">45$</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <img src="~/images/page1_img2.jpg" alt="">
+                                    <div class="col1 upp"> <a href="#">Lorem ipsum doamet consectet</a></div>
+                                    <span> Dorem ipsum dolor amet consectetur</span>
+                                    <div class="price">45$</div>
+                                </div>
+                            </li>
+                            <li> 
+                                <div>
+                                    <img src="~/images/page1_img3.jpg" alt="">
+                                    <div class="col1 upp"> <a href="#">Lorem ipsum doamet consectet</a></div>
+                                    <span> Dorem ipsum dolor amet consectetur</span>
+                                    <div class="price">45$</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <img src="~/images/page1_img4.jpg" alt="">
+                                    <div class="col1 upp"> <a href="#">Lorem ipsum doamet consectet</a></div>
+                                    <span> Dorem ipsum dolor amet consectetur</span>
+                                    <div class="price">45$</div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="clear"></div>
+                <div class="bottom_block">
+                    <div class="grid_6">
+                        <h3>Contact Us</h3>
+                        <p class="col1">Join our digital mailing list and get news<br>deals and be first to know about events</p>
+                        <form id="newsletter" action="#">
+                            <div class="success">Your subscribe request has been sent!</div>
+                            <label class="email">
+                                <input type="email" value="Enter e-mail address">
+                                <a href="#" class="btn" data-type="submit">subscribe</a> <span class="error">*This is not a valid email address.</span>
+                            </label>
+                        </form>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+    <footer></footer>
+</body>
+</html>
