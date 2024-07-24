@@ -1,0 +1,45 @@
+CREATE TABLE Dishes (
+    DishID INT PRIMARY KEY IDENTITY(1,1),
+    Name NVARCHAR(100) NOT NULL,
+    Price DECIMAL(10, 2) NOT NULL,
+    CategoryID INT,
+    Description NVARCHAR(MAX)
+);
+
+CREATE TABLE Categories (
+    CategoryID INT PRIMARY KEY IDENTITY(1,1),
+    CategoryName NVARCHAR(50) NOT NULL,
+);
+
+CREATE TABLE Reservations (
+    ReservationID INT PRIMARY KEY IDENTITY(1,1),
+    UserID INT,
+    TableID INT,
+    ReservationDate DATE NOT NULL,
+    ReservationTime TIME NOT NULL,
+    FOREIGN KEY (UserID) REFERENCES Users(UserID),
+    FOREIGN KEY (TableID) REFERENCES Tables(TableID)
+);
+
+
+CREATE TABLE Tables (
+    TableID INT PRIMARY KEY IDENTITY(1,1),
+    TableNumber INT NOT NULL,
+    Seats INT NOT NULL
+);
+
+CREATE TABLE Orders (
+    OrderID INT PRIMARY KEY IDENTITY(1,1),
+    ReservationID INT,
+    OrderDate DATETIME DEFAULT GETDATE(),
+    FOREIGN KEY (ReservationID) REFERENCES Reservations(ReservationID)
+);
+
+CREATE TABLE OrderDetails (
+    OrderDetailID INT PRIMARY KEY IDENTITY(1,1),
+    OrderID INT,
+    DishID INT,
+    Quantity INT NOT NULL,
+    FOREIGN KEY (OrderID) REFERENCES Orders(OrderID),
+    FOREIGN KEY (DishID) REFERENCES Dishes(DishID)
+);
