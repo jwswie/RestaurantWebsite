@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 //using RestaurantWebsite.Models;
 
 namespace RestaurantWebsite.Controllers
@@ -14,8 +15,8 @@ namespace RestaurantWebsite.Controllers
 
         public IActionResult Index()
         {
-
-            return View();
+            var dishes = _context.Dishes.Include(d => d.Category).ToList();
+            return View(dishes);
         }
     }
 }
